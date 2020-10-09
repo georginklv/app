@@ -1,19 +1,24 @@
 <template>
-	<v-app>
+	<v-app
+		><TheNavBar />
 		<v-main>
-			<HelloWorld />
-		</v-main>
+			<transition name="fade">
+				<router-view />
+			</transition> </v-main
+		><TheFooter />
 	</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import TheNavBar from './components/TheNavBar';
+import TheFooter from './components/TheFooter';
 
 export default {
 	name: 'App',
 
 	components: {
-		HelloWorld,
+		TheNavBar,
+		TheFooter,
 	},
 
 	data: () => ({
