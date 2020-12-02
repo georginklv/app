@@ -1,8 +1,9 @@
 <template>
-	<v-app-bar absolute dark elevate-on-scroll scroll-target="#scrolling-techniques-7">
-		<v-toolbar-title> <router-link to="/">Title</router-link> </v-toolbar-title>
+	<v-app-bar absolute dark>
+		<v-toolbar-title> <a to="/">Title</a> </v-toolbar-title>
 
 		<v-spacer></v-spacer>
+		<span>{{ this.$route.params.username }}</span>
 	</v-app-bar>
 </template>
 
