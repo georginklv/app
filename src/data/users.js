@@ -1,0 +1,40 @@
+export default {
+	data: [
+		{
+			id: 1,
+			username: 'LiuKang',
+			firstName: 'Liu',
+			lastName: 'Kang',
+			email: 'liu.kang@mk.com',
+			isAdmin: true,
+			image: '',
+		},
+		{
+			id: 2,
+			username: 'JCage',
+			firstName: 'Johnny',
+			lastName: 'Cage',
+			email: 'johnny.cage@mk.com',
+			isAdmin: false,
+			twoots: [],
+		},
+		{
+			id: 3,
+			username: 'SBlade',
+			firstName: 'Sonya',
+			lastName: 'Blade',
+			email: 'sonya.blade@mk.com',
+			isAdmin: false,
+			twoots: [],
+		},
+		{
+			id: 4,
+			username: 'SubZero',
+			firstName: 'Sub',
+			lastName: 'Zero',
+			email: 'sub.zero@mk.com',
+			isAdmin: false,
+			twoots: [],
+		},
+	],
+};
