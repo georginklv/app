@@ -1,6 +1,6 @@
 <template>
 	<v-app-bar absolute dark>
-		<v-toolbar-title> <a to="/">Title</a> </v-toolbar-title>
+		<v-toolbar-title> <a href="/">Title</a> </v-toolbar-title>
 
 		<v-spacer></v-spacer>
 		<span>{{ this.$route.params.username }}</span>

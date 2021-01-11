@@ -7,7 +7,11 @@ export default {
 			lastName: 'Kang',
 			email: 'liu.kang@mk.com',
 			isAdmin: true,
-			image: '',
+			followers: 10,
+			twoots: [
+				{ id: 1, content: 'Earth Realm is the best!' },
+				{ id: 2, content: 'Shao Kahn suck ballz!' },
+			],
 		},
 		{
 			id: 2,
@@ -16,6 +20,7 @@ export default {
 			lastName: 'Cage',
 			email: 'johnny.cage@mk.com',
 			isAdmin: false,
+			followers: 7,
 			twoots: [],
 		},
 		{
@@ -25,6 +30,7 @@ export default {
 			lastName: 'Blade',
 			email: 'sonya.blade@mk.com',
 			isAdmin: false,
+			followers: 110,
 			twoots: [],
 		},
 		{
@@ -34,6 +40,7 @@ export default {
 			lastName: 'Zero',
 			email: 'sub.zero@mk.com',
 			isAdmin: false,
+			followers: 0,
 			twoots: [],
 		},
 	],

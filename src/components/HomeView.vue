@@ -1,5 +1,5 @@
 <template>
-	<v-app class="container">
+	<v-app class="wrapper">
 		<h1>Home Page</h1>
 		<div v-for="user in data" :key="user.username">
 			<router-link

@@ -23,4 +23,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 60px;
+	height: calc(100vh - 88px);
+	overflow: hidden;
+	width: 100%;
+}
+</style>
