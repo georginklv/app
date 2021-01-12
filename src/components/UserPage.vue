@@ -11,20 +11,20 @@
 				</v-card>
 				<v-card class="padding">
 					<v-form>
-						<v-text-field label="New Twoot " counter maxlength="120"></v-text-field>
+						<v-text-field v-model="post" label="New Twoot " counter maxlength="120"></v-text-field>
 						<v-row class="center">
-							<v-col class="zero" cols="6"><v-select label="Type" :items="items"></v-select></v-col>
-							<v-col class="zero" cols="4"><v-btn>twoot</v-btn></v-col>
+							<v-col class="zero" cols="6"><v-select label="Type" :items="items" v-model="select"></v-select></v-col>
+							<v-col class="zero" cols="4" @click="newPost"><v-btn>twoot</v-btn></v-col>
 						</v-row>
 					</v-form>
 				</v-card>
-				<v-btn v-show="user.isAdmin" @click="asd">Admin Panel</v-btn>
-				<v-btn v-show="!user.isAdmin">Home</v-btn>
+				<v-btn v-show="user.isAdmin" @click="goToAdmin">Admin Panel</v-btn>
+				<v-btn v-show="!user.isAdmin" @click="goToHome">Home</v-btn>
 			</v-col>
 			<v-col cols="8">
-				<v-card v-for="twoot in twoots" :key="twoot.id">
-					<p>{{ user.username }}</p>
-					<p>{{ user.twoots }}</p>
+				<v-card v-for="(twoot, i) in user.twoots" :key="i" class="padding">
+					<p>@{{ user.username }}</p>
+					<p>{{ twoot.content }}</p>
 				</v-card>
 			</v-col>
 		</div>
@@ -43,18 +43,28 @@ export default {
 	},
 	data() {
 		return {
-			twoots: users.data.find((user) => user.username === this.username),
+			post: '',
+			select: '',
 			items: ['Draft', 'Instant Tweet'],
 		};
+	},
+	methods: {
+		newPost() {
+			if (this.select == !null || this.select === 'Instant Tweet') {
+				this.user.twoots.push({ content: this.post });
+				this.post = '';
+			}
+		},
+		goToAdmin() {
+			this.$router.push('/admin-panel');
+		},
+		goToHome() {
+			this.$router.push('/');
+		},
 	},
 	computed: {
 		user() {
 			return users.data.find((user) => user.username === this.username);
-		},
-	},
-	methods: {
-		asd() {
-			console.log(this.twoots);
 		},
 	},
 };

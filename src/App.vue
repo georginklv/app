@@ -27,9 +27,10 @@ export default {
 .wrapper {
 	display: flex;
 	align-content: center;
+	align-items: center;
 	justify-content: center;
 	padding: 60px;
-	height: calc(100vh - 88px);
+	height: 100vh;
 	overflow: hidden;
 	width: 100%;
 }

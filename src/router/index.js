@@ -26,6 +26,11 @@ const router = new VueRouter({
 				}
 			},
 		},
+		{
+			path: '/admin-panel',
+			name: 'admin-panel',
+			component: require('../components/AdminPanel.vue').default,
+		},
 	],
 });
 export default router;
